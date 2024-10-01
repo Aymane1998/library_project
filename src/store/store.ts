@@ -9,7 +9,7 @@ import NavReducer from './navigation/navigationSlice';
 import { useDispatch } from 'react-redux';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
-import countryReducer from './country/countryCombinedSlice';
+import wordReducer from './word/wordCombinedSlice';
 
 const persistConfig = {
   key: 'root',
@@ -19,7 +19,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   nav: NavReducer,
-  country: countryReducer
+  word: wordReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

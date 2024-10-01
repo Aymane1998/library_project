@@ -14,6 +14,7 @@ import {
 } from '@mui/material';
 import LightModeIcon from '@mui/icons-material/LightMode'; // Ensure you import these icons
 import DarkModeIcon from '@mui/icons-material/DarkMode'; // Ensure you import these icons
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import { useState } from 'react';
 
 export default function MenuAppBar() {
@@ -32,8 +33,7 @@ export default function MenuAppBar() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar
-          position="static" >
+        <AppBar position="static">
           <Toolbar>
             <IconButton
               size="large"
@@ -42,8 +42,17 @@ export default function MenuAppBar() {
               aria-label="menu"
               sx={{ mr: 2 }}
             ></IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Where in the world?
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{
+                flexGrow: 1,
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}
+            >
+              <AutoStoriesIcon fontSize="large" sx={{marginRight:'20px'}}  /> Dictionary App
             </Typography>
             <FormGroup
               sx={{
